@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amit Raj | Aspiring Software Developer & Tech Enthusiast</title>
+  <meta name="description" content="Portfolio of Amit Raj - 18-year-old B.Tech CSE Core student at JECRC University, passionate programmer, tech enthusiast, and aspiring Software Developer.">
+  <meta name="keywords" content="Amit Raj, Software Developer, BTech CSE, JECRC University, Tech Enthusiast, Programmer, Portfolio, C++, Full-Stack">
+  <meta name="author" content="Amit Raj">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Background Interactive Canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Cyber Grid Overlay -->
+  <div class="grid-overlay"></div>
+
+  <!-- Header / Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">&lt;</span><span class="logo-name">AR</span><span class="logo-slash">/</span><span class="logo-bracket">&gt;</span>
+        <span class="logo-badge">DEV</span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+          <li class="nav-item"><a href="#arcade" class="nav-link">Dev Arcade</a></li>
+          <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+          <li class="nav-item"><a href="#hobbies" class="nav-link">Hobbies</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- SFX Toggle -->
+        <button id="sfx-toggle" class="icon-btn" title="Toggle Sound Effects" aria-label="Toggle sound effects">
+          <i class="fa-solid fa-volume-high" id="sfx-icon"></i>
+        </button>
+
+        <!-- CTA Button -->
+        <a href="#contact" class="btn btn-sm btn-primary">
+          <span>Let's Talk</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="home">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-badge animate-fade-in">
+            <span class="pulse-dot"></span>
+            <span>Available for Software Developer Internships & Projects</span>
+          </div>
+
+          <h1 class="hero-title animate-fade-up">
+            Hi, I'm <span class="gradient-text">Amit Raj</span>
+          </h1>
+
+          <div class="typewriter-container animate-fade-up delay-1">
+            <span class="typewriter-prefix">I am an </span>
+            <span class="typewriter-text" id="typewriter"></span>
+            <span class="cursor">|</span>
+          </div>
+
+          <p class="hero-bio animate-fade-up delay-2">
+            18-year-old Computer Science undergraduate at <strong>JECRC University</strong>. 
+            Passionate programmer and tech enthusiast on a mission to build scalable software, 
+            solve algorithmic challenges, and create impactful digital experiences as a future <strong>Software Developer</strong>.
+          </p>
+
+          <div class="hero-buttons animate-fade-up delay-3">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fa-solid fa-laptop-code"></i>
+              <span>View Projects</span>
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Contact Me</span>
+            </a>
+            <a href="#arcade" class="btn btn-glass" title="Play Interactive Bug Blaster">
+              <i class="fa-solid fa-gamepad"></i>
+              <span>Play Arcade</span>
+            </a>
+          </div>
+
+          <div class="quick-stats animate-fade-up delay-4">
+            <div class="stat-card">
+              <span class="stat-number">18</span>
+              <span class="stat-label">Years Old</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-card">
+              <span class="stat-number">B.Tech</span>
+              <span class="stat-label">CSE Core @ JECRC</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-card">
+              <span class="stat-number">💻</span>
+              <span class="stat-label">Future Software Dev</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual animate-float">
+          <div class="hero-card-glow"></div>
+          <div class="hero-card" id="code-card">
+            <div class="hero-card-header">
+              <div class="terminal-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="terminal-title">amit_raj.cpp</span>
+              <span class="terminal-mode">SOFTWARE_ENGINEER_READY</span>
+            </div>
+            <div class="code-editor">
+              <pre><code><span class="code-comment">// Software Developer Profile Initialization</span>
+<span class="code-keyword">#include</span> <span class="code-string">&lt;iostream&gt;</span>
+<span class="code-keyword">#include</span> <span class="code-string">&lt;vector&gt;</span>
+
+<span class="code-keyword">class</span> <span class="code-type">SoftwareDeveloper</span> {
+<span class="code-keyword">public:</span>
+    std::string name = <span class="code-string">"Amit Raj"</span>;
+    <span class="code-type">int</span> age = <span class="code-number">18</span>;
+    std::string college = <span class="code-string">"JECRC University"</span>;
+    std::string degree = <span class="code-string">"B.Tech CSE Core"</span>;
+    std::string aspiration = <span class="code-string">"Software Developer"</span>;
+    std::vector&lt;std::string&gt; passions = {
+        <span class="code-string">"Programming"</span>, <span class="code-string">"Clean Code"</span>,
+        <span class="code-string">"Cricket"</span>, <span class="code-string">"Movies"</span>
+    };
+
+    <span class="code-type">void</span> <span class="code-func">buildFuture</span>() {
+        <span class="code-keyword">while</span> (<span class="code-keyword">true</span>) {
+            code();
+            learnNewTech();
+            solveProblems();
+            deployToProduction();
+        }
+    }
+};</code></pre>
+            </div>
+            <div class="hero-status-bar">
+              <span><i class="fa-solid fa-code-branch"></i> main*</span>
+              <span><i class="fa-solid fa-shield-halved"></i> 0 Errors, 100% Passion</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-down-indicator">
+        <a href="#about" aria-label="Scroll to About section">
+          <span class="mouse">
+            <span class="wheel"></span>
+          </span>
+          <span class="scroll-text">SCROLL DOWN</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// IDENTITY & PASSION</span>
+          <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+          <p class="section-subtitle">Get to know who I am, what inspires me, and where I'm headed in the world of software development.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card glass-panel main-bio">
+            <div class="card-icon"><i class="fa-solid fa-user-gear"></i></div>
+            <h3>Who is Amit Raj?</h3>
+            <p>
+              I am an <strong>18-year-old tech enthusiast</strong> pursuing my <strong>B.Tech in Computer Science and Engineering (Core)</strong> at <strong>JECRC University</strong>.
+            </p>
+            <p>
+              From the moment I wrote my first lines of code, I discovered the extraordinary power of software to solve real-world problems. Programming is not just an academic path for me—it is my creative canvas, an intellectual challenge, and my lifelong passion.
+            </p>
+            <p>
+              My goal is to establish a high-impact career as a <strong>Software Developer</strong>, building scalable backends, intuitive frontends, and robust software architectures. Beyond coding, I am an enthusiastic <strong>cricket player</strong> and a massive fan of <strong>watching movies</strong>.
+            </p>
+
+            <div class="about-details-list">
+              <div class="detail-item">
+                <span class="detail-label"><i class="fa-solid fa-cake-candles"></i> Age:</span>
+                <span class="detail-value">18 Years</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label"><i class="fa-solid fa-graduation-cap"></i> Degree:</span>
+                <span class="detail-value">B.Tech CSE Core</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label"><i class="fa-solid fa-building-columns"></i> University:</span>
+                <span class="detail-value">JECRC University, Jaipur</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label"><i class="fa-solid fa-bullseye"></i> Goal:</span>
+                <span class="detail-value">Software Developer & Systems Builder</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-subgrid">
+            <div class="about-card glass-panel highlight-card">
+              <div class="card-icon neon-purple"><i class="fa-solid fa-code"></i></div>
+              <h3>The Software Dev Vision</h3>
+              <p>
+                I believe software engineering is the art of translating ideas into reliable, high-performance systems. I strive to write maintainable, modular, and elegant code that scales seamlessly.
+              </p>
+              <div class="badge-row">
+                <span class="tech-pill">Clean Architecture</span>
+                <span class="tech-pill">DSA & Logic</span>
+                <span class="tech-pill">Full-Stack Tech</span>
+                <span class="tech-pill">System Design</span>
+              </div>
+            </div>
+
+            <div class="about-card glass-panel highlight-card">
+              <div class="card-icon neon-cyan"><i class="fa-solid fa-microchip"></i></div>
+              <h3>Curiosity-Driven Technologist</h3>
+              <p>
+                Being in CSE Core at JECRC University grounds me in core fundamentals like operating systems, database management, and object-oriented programming while keeping me excited for modern dev tools.
+              </p>
+              <div class="badge-row">
+                <span class="tech-pill">Problem Solving</span>
+                <span class="tech-pill">Continuous Learning</span>
+                <span class="tech-pill">Tech Exploration</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// TECH ARSENAL</span>
+          <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+          <p class="section-subtitle">Languages, frameworks, tools, and computer science fundamentals I utilize.</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Skill Category 1 -->
+          <div class="skill-category glass-panel">
+            <div class="category-header">
+              <div class="category-icon"><i class="fa-solid fa-code"></i></div>
+              <h3>Programming Languages</h3>
+            </div>
+            <div class="skills-list">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>C++ (DSA & Problem Solving)</span>
+                  <span>88%</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 88%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>Java (OOP & Fundamentals)</span>
+                  <span>82%</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 82%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>Python (Scripting & Automation)</span>
+                  <span>80%</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 80%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>JavaScript / Modern ES6+</span>
+                  <span>85%</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 85%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill Category 2 -->
+          <div class="skill-category glass-panel">
+            <div class="category-header">
+              <div class="category-icon"><i class="fa-solid fa-laptop-code"></i></div>
+              <h3>Software & Web Development</h3>
+            </div>
+            <div class="skills-list">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>HTML5 / Modern CSS3</span>
+                  <span>90%</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 90%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>Frontend Engineering & Responsive UI</span>
+                  <span>84%</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 84%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>Node.js & Express Basics</span>
+                  <span>75%</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 75%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>REST APIs & JSON Handling</span>
+                  <span>82%</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 82%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill Category 3 -->
+          <div class="skill-category glass-panel">
+            <div class="category-header">
+              <div class="category-icon"><i class="fa-solid fa-brain"></i></div>
+              <h3>Computer Science Core</h3>
+            </div>
+            <div class="skills-list">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>Data Structures & Algorithms</span>
+                  <span>85%</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 85%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>Object-Oriented Programming (OOP)</span>
+                  <span>88%</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 88%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>Database Management (DBMS / SQL)</span>
+                  <span>78%</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 78%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>Operating Systems Fundamentals</span>
+                  <span>75%</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 75%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill Category 4 -->
+          <div class="skill-category glass-panel">
+            <div class="category-header">
+              <div class="category-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+              <h3>Tools & Workflow</h3>
+            </div>
+            <div class="skills-list">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>Git & GitHub (Version Control)</span>
+                  <span>86%</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 86%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>VS Code / Developer Workspaces</span>
+                  <span>92%</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 92%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>Terminal / Linux Command Line</span>
+                  <span>78%</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 78%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>Postman & API Debugging</span>
+                  <span>80%</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 80%"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE ARCADE / MINI GAME SECTION -->
+    <section class="section arcade-section" id="arcade">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// INTERACTIVE EXPERIENCE</span>
+          <h2 class="section-title">Amit's <span class="gradient-text">Dev Arcade</span></h2>
+          <p class="section-subtitle">A playable interactive mini-game built right inside my portfolio! Control the developer craft, blast bugs, dodge runtime crashes, and collect clean-code power cores!</p>
+        </div>
+
+        <div class="arcade-wrapper glass-panel">
+          <div class="arcade-screen-container">
+            <div class="arcade-hud">
+              <div class="hud-item"><i class="fa-solid fa-star"></i> SCORE: <span id="game-score">0</span></div>
+              <div class="hud-item"><i class="fa-solid fa-trophy"></i> HIGH: <span id="game-highscore">0</span></div>
+              <div class="hud-item"><i class="fa-solid fa-heart"></i> LIVES: <span id="game-lives">3</span></div>
+            </div>
+
+            <!-- Canvas for Game -->
+            <canvas id="arcade-canvas" width="700" height="400"></canvas>
+
+            <!-- Game Overlay Start / Game Over -->
+            <div id="game-overlay" class="game-overlay">
+              <div class="overlay-content">
+                <div class="game-logo-badge">⚡ BUG HUNTER & CODE RUNNER ⚡</div>
+                <h3 id="overlay-title">Ready Developer One?</h3>
+                <p id="overlay-msg">Control your craft, eliminate software bugs, and collect clean code cores to level up!</p>
+                <div class="controls-guide">
+                  <span><kbd>←</kbd> <kbd>→</kbd> or <kbd>A</kbd> <kbd>D</kbd> : Steer Craft</span>
+                  <span><kbd>SPACE</kbd> : Fire Code Lasers</span>
+                </div>
+                <button id="start-game-btn" class="btn btn-primary btn-arcade">
+                  <i class="fa-solid fa-play"></i> START GAME
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mobile Touch Controls for Game -->
+          <div class="mobile-game-controls">
+            <button id="btn-left" class="game-ctrl-btn" aria-label="Move Left"><i class="fa-solid fa-arrow-left"></i></button>
+            <button id="btn-fire" class="game-ctrl-btn fire" aria-label="Fire Code Laser"><i class="fa-solid fa-bolt"></i></button>
+            <button id="btn-right" class="game-ctrl-btn" aria-label="Move Right"><i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// CRAFTED WORK</span>
+          <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+          <p class="section-subtitle">Software applications, algorithms, and web solutions developed during my B.Tech CSE journey.</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card glass-panel">
+            <div class="project-banner">
+              <div class="project-badge">DSA / VISUALIZER</div>
+              <div class="project-visual-icon"><i class="fa-solid fa-network-wired"></i></div>
+            </div>
+            <div class="project-content">
+              <h3>AlgoVision: Algorithm Visualizer</h3>
+              <p>
+                An interactive tool visualizing classic sorting algorithms (Merge, Quick, Heap) and graph pathfinding algorithms (Dijkstra, BFS, DFS) with real-time speed manipulation and comparisons.
+              </p>
+              <div class="project-tech">
+                <span>C++ / JS</span>
+                <span>HTML5 Canvas</span>
+                <span>DSA Algorithms</span>
+                <span>CSS3</span>
+              </div>
+              <div class="project-links">
+                <a href="#about" class="project-link"><i class="fa-solid fa-circle-info"></i> Details</a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fa-brands fa-github"></i> Repository</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card glass-panel">
+            <div class="project-banner">
+              <div class="project-badge">FULL-STACK / PRODUCTIVITY</div>
+              <div class="project-visual-icon"><i class="fa-solid fa-list-check"></i></div>
+            </div>
+            <div class="project-content">
+              <h3>DevPulse: Developer Task & Snippet Manager</h3>
+              <p>
+                A clean developer productivity dashboard allowing programmers to organize coding tasks, store frequently used code snippets with syntax highlighting, and track development sprints.
+              </p>
+              <div class="project-tech">
+                <span>JavaScript</span>
+                <span>Node.js</span>
+                <span>LocalStorage API</span>
+                <span>REST API</span>
+              </div>
+              <div class="project-links">
+                <a href="#contact" class="project-link"><i class="fa-solid fa-paper-plane"></i> Discuss</a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fa-brands fa-github"></i> Code</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card glass-panel">
+            <div class="project-banner">
+              <div class="project-badge">API / REAL-TIME DATA</div>
+              <div class="project-visual-icon"><i class="fa-solid fa-cloud-sun"></i></div>
+            </div>
+            <div class="project-content">
+              <h3>Nexus Weather & Tech Pulse Dashboard</h3>
+              <p>
+                A dynamic, asynchronous dashboard consuming live weather telemetry and tech news feeds via REST APIs, featuring instant search caching, geolocation, and futuristic glassmorphic UI.
+              </p>
+              <div class="project-tech">
+                <span>Fetch API</span>
+                <span>JSON</span>
+                <span>Modern CSS</span>
+                <span>Async JS</span>
+              </div>
+              <div class="project-links">
+                <a href="#about" class="project-link"><i class="fa-solid fa-code"></i> Overview</a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fa-brands fa-github"></i> Source</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="project-card glass-panel">
+            <div class="project-banner">
+              <div class="project-badge">WEB / SHOWCASE</div>
+              <div class="project-visual-icon"><i class="fa-solid fa-terminal"></i></div>
+            </div>
+            <div class="project-content">
+              <h3>Amit Raj Cyber Interactive Portfolio</h3>
+              <p>
+                A modern personal developer portfolio built with real-time interactive canvas particles, Web Audio API sound synthesizer, playable HTML5 mini-game, and continuous GitHub Pages deployment.
+              </p>
+              <div class="project-tech">
+                <span>HTML5</span>
+                <span>CSS3 Modern</span>
+                <span>JavaScript ES6</span>
+                <span>GitHub Pages</span>
+              </div>
+              <div class="project-links">
+                <a href="#home" class="project-link"><i class="fa-solid fa-globe"></i> Live</a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fa-brands fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOBBIES SECTION -->
+    <section class="section hobbies-section" id="hobbies">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// BEYOND CODE</span>
+          <h2 class="section-title">My <span class="gradient-text">Hobbies</span> & Interests</h2>
+          <p class="section-subtitle">What inspires, energizes, and relaxes me outside of programming.</p>
+        </div>
+
+        <div class="hobbies-grid">
+          <!-- Cricket Hobby Card -->
+          <div class="hobby-card glass-panel">
+            <div class="hobby-icon-box">
+              <i class="fa-solid fa-baseball-bat-ball"></i>
+            </div>
+            <div class="hobby-tag">Sport & Passion</div>
+            <h3>Playing Cricket</h3>
+            <p>
+              Cricket is my absolute favorite sport! It instills sharp tactical thinking, teamwork, quick decision-making under high pressure, and athletic stamina. Whether executing a bowling strategy or calculating runs under pressure, it keeps me focused, driven, and energized.
+            </p>
+            <div class="hobby-takeaways">
+              <span><i class="fa-solid fa-check"></i> Tactical Strategy</span>
+              <span><i class="fa-solid fa-check"></i> Teamwork & Collaboration</span>
+              <span><i class="fa-solid fa-check"></i> Composure Under Pressure</span>
+            </div>
+          </div>
+
+          <!-- Movies Hobby Card -->
+          <div class="hobby-card glass-panel">
+            <div class="hobby-icon-box">
+              <i class="fa-solid fa-film"></i>
+            </div>
+            <div class="hobby-tag">Art & Narrative</div>
+            <h3>Watching Movies</h3>
+            <p>
+              I am a huge cinema enthusiast. From thought-provoking sci-fi epics to gripping thrillers and action-packed spectacles, watching movies sparks my imagination. I love observing narrative pacing, world-building, sound design, and visual storytelling that in turn inspires my design aesthetics.
+            </p>
+            <div class="hobby-takeaways">
+              <span><i class="fa-solid fa-check"></i> Visual Storytelling</span>
+              <span><i class="fa-solid fa-check"></i> Creative World-Building</span>
+              <span><i class="fa-solid fa-check"></i> Narrative & Mood Appreciation</span>
+            </div>
+          </div>
+
+          <!-- Tech Exploring Hobby Card -->
+          <div class="hobby-card glass-panel">
+            <div class="hobby-icon-box">
+              <i class="fa-solid fa-microchip"></i>
+            </div>
+            <div class="hobby-tag">Tech Enthusiast</div>
+            <h3>Tech Exploring & Coding</h3>
+            <p>
+              Staying ahead of technological innovations is a genuine hobby for me. I love discovering new developer tools, open-source repositories, reading tech blogs, and building experimental scripts to automate tasks and test new ideas.
+            </p>
+            <div class="hobby-takeaways">
+              <span><i class="fa-solid fa-check"></i> Continuous Curiosity</span>
+              <span><i class="fa-solid fa-check"></i> Open Source Tinkering</span>
+              <span><i class="fa-solid fa-check"></i> Exploring Emerging Tech</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// GET IN TOUCH</span>
+          <h2 class="section-title">Contact <span class="gradient-text">Me</span></h2>
+          <p class="section-subtitle">Feel free to reach out for software developer internships, coding projects, collaborations, or a casual tech discussion!</p>
+        </div>
+
+        <div class="contact-wrapper">
+          <!-- Left: Info Cards -->
+          <div class="contact-info-column">
+            <!-- Email Card -->
+            <div class="contact-info-card glass-panel">
+              <div class="contact-card-icon">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div class="contact-card-details">
+                <span class="contact-label">GMAIL ADDRESS</span>
+                <a href="mailto:rajamit802212@gmail.com" class="contact-value" id="email-address">rajamit802212@gmail.com</a>
+              </div>
+              <button class="copy-btn" id="copy-email-btn" title="Copy email address" aria-label="Copy email">
+                <i class="fa-regular fa-copy"></i>
+                <span class="copy-tooltip" id="copy-tooltip">Copied!</span>
+              </button>
+            </div>
+
+            <!-- University / Location Card -->
+            <div class="contact-info-card glass-panel">
+              <div class="contact-card-icon">
+                <i class="fa-solid fa-building-columns"></i>
+              </div>
+              <div class="contact-card-details">
+                <span class="contact-label">UNIVERSITY & CAMPUS</span>
+                <span class="contact-value">JECRC University, Jaipur, Rajasthan, India</span>
+              </div>
+            </div>
+
+            <!-- Education / Degree Card -->
+            <div class="contact-info-card glass-panel">
+              <div class="contact-card-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <div class="contact-card-details">
+                <span class="contact-label">DEGREE PROGRAM</span>
+                <span class="contact-value">B.Tech Computer Science & Engineering (Core)</span>
+              </div>
+            </div>
+
+            <!-- Status Card -->
+            <div class="status-box glass-panel">
+              <div class="status-indicator">
+                <span class="status-beacon"></span>
+                <span>Status: <strong>Open to Software Engineering Opportunities</strong></span>
+              </div>
+              <p>I actively check my inbox and typically reply promptly. Looking forward to connecting!</p>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Message Form -->
+          <div class="contact-form-column glass-panel">
+            <h3>Send a Direct Message</h3>
+            <p>Have an opportunity or project idea? Send me a quick ping!</p>
+
+            <form id="contact-form" class="contact-form">
+              <div class="form-group">
+                <label for="form-name"><i class="fa-solid fa-user"></i> Your Name</label>
+                <input type="text" id="form-name" name="name" placeholder="John Doe" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-email"><i class="fa-solid fa-at"></i> Your Email</label>
+                <input type="email" id="form-email" name="email" placeholder="john@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-subject"><i class="fa-solid fa-tag"></i> Subject</label>
+                <input type="text" id="form-subject" name="subject" placeholder="Software Developer Opportunity / Tech Collaboration" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-message"><i class="fa-solid fa-message"></i> Message</label>
+                <textarea id="form-message" name="message" rows="4" placeholder="Hello Amit, I checked out your portfolio and would like to connect regarding..." required></textarea>
+              </div>
+
+              <div class="form-btn-group">
+                <button type="submit" class="btn btn-primary btn-submit">
+                  <i class="fa-solid fa-paper-plane"></i>
+                  <span>Send Message</span>
+                </button>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=rajamit802212@gmail.com" target="_blank" rel="noopener noreferrer" class="btn btn-glass" title="Open directly in Gmail web">
+                  <i class="fa-brands fa-google"></i>
+                  <span>Open in Gmail</span>
+                </a>
+              </div>
+            </form>
+
+            <div id="form-toast" class="form-toast">Opening your email client with your prefilled message...</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <a href="#home" class="nav-logo">
+          <span class="logo-bracket">&lt;</span><span class="logo-name">AR</span><span class="logo-slash">/</span><span class="logo-bracket">&gt;</span>
+        </a>
+        <p>Amit Raj • 18 Years Old • B.Tech CSE Core @ JECRC University • Aspiring Software Developer</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="mailto:rajamit802212@gmail.com" title="Email Amit Raj"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=rajamit802212@gmail.com" target="_blank" rel="noopener noreferrer" title="Open in Gmail"><i class="fa-brands fa-google"></i></a>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="current-year"></span> Amit Raj. Built with pure HTML5, CSS3 & JavaScript for GitHub Pages.</p>
+        <a href="#home" class="back-to-top" aria-label="Back to top">
+          <i class="fa-solid fa-arrow-up"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
